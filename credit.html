@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> ineractive card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./style2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero sm:flex gap-10 justify-between font-space ">
+        <div class="pru h-screen relative">
+            <div class="fcard h-60 absolute top-28 left-1  sm:left-48 rounded-2xl ">
+                <span id="nameo" class="absolute bottom-0 m-4 text-white uppercase">your name </span>
+            </div>
+            <div class="bcard h-60 w-96 absolute top-96 left-1  sm:left-64 rounded-2xl">
+                <span id="cardo" class="absolute bottom-20 right-16 mb-6 text-white font-semibold text-2xl ">000 </span>
+            </div>
+        </div>
+        <div class="infos flex flex-col justify-center mr-36 ml-36">
+            <label class="mb-3 uppercase tracking-widest font-medium">cardholder name</label>
+            <input id="name" type="text" class="border-solid border-lightviolet border-2  text-xl p-2  rounded-lg"
+                placeholder="e.g. Jane Appleseed ">
+            <label class="mb-3 uppercase tracking-widest font-medium">card number</label>
+            <input type="number"
+                class="border-solid border-lightviolet border-2 p-2 rounded-lg text-xl appearance-none -webkit-appearance-none"
+                placeholder=" e.g. 1234 5678 9123 0000 ">
+            <div class=" flex justify-between " id="date">
+                <div class="flex-col flex justify-start">
+                    <label class="mb-3 mt-3 uppercase tracking-widest font-medium">exp. date (mm/yy)</label>
+                    <div class="flex float-start gap-4"><input type="number"
+                            class="border-solid border-lightviolet border-2 p-2 w-32  rounded-lg text-xl appearance-none -webkit-appearance-none"
+                            placeholder="MM ">
+                        <input type="number"
+                            class="border-solid border-lightviolet border-2 p-2 w-32  rounded-lg text-xl appearance-none -webkit-appearance-none"
+                            placeholder="YY ">
+                    </div>
+                </div>
+                <div class="cvc flex-col flex justify-start"><label
+                        class="mb-3 mt-3 uppercase tracking-widest font-medium">cvc</label>
+                    <input id="cardn" type="number"
+                        class="border-solid border-lightviolet border-2 p-2  w-56 rounded-lg text-xl appearance-none -webkit-appearance-none"
+                        placeholder=" e.g.123 ">
+                </div>
+            </div>
+            <button
+                class="p-6 text-center text-white capitalize bg-darkviolet rounded-lg text-xl mt-6 ">confirm</button>
+        </div>
+    </div>
+    <script src="credit.js">
+    </script>
+
+</body>
+
+</html>

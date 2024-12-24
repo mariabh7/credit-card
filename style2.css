@@ -1,0 +1,27 @@
+.pru{
+ width: 40%;
+   background-image: url('interactive-card-details-form-main/images/bg-main-desktop.png') ;
+}
+.pru, .fcard, .bcard{
+   background-repeat : no-repeat ;
+}
+.infos{
+   width: 40%;
+}
+.fcard, .bcard{
+   width: 430px ;
+}
+.fcard{
+   margin-bottom : 3rem ;
+      background-image: url('interactive-card-details-form-main/images/bg-card-front.png') ;
+}
+input{
+  margin-bottom : 2rem ;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.bcard{
+      background-image: url('interactive-card-details-form-main/images/bg-card-back.png') ;
+}
