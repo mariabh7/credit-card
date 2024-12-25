@@ -15,13 +15,26 @@ const userInfoOut = {
 for (let i in userinfo) {
     userinfo[i].addEventListener('input', function () {
         for (let j in userInfoOut) {
-
             if (i === j) {
                 userInfoOut[j].textContent = userinfo[i].value;
                 if (userinfo[i].value === '') {
-                    userInfoOut[j].textContent = "error";
+                    userInfoOut[j].textContent = "err";
                 }
             }
         }
     });
 }
+const errorc = document.getElementById("errorc");
+const initialContent = errorc.innerText;
+userinfo.cardNumber.addEventListener('input', function () {
+    if ((userinfo.cardNumber.value.length != 19) || (/[a-zA-Z]/.test(userinfo.cardNumber.value))) {
+        errorc.style.display = "block";
+    } else if ((userinfo.cardNumber.value.length == 19) || (userinfo.cardNumber.value.length == 0)) {
+        errorc.style.display = "none";
+    }
+    if (/[a-zA-Z]/.test(userinfo.cardNumber.value)) {
+        errorc.innerHTML = "numbers only"
+    } else {
+        errorc.innerHTML = initialContent;
+    }
+});
