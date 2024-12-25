@@ -1,6 +1,6 @@
 .pru {
    width: 40%;
-   background-image: url('interactive-card-details-form-main/images/bg-main-desktop.png');
+   background-image: url("interactive-card-details-form-main/images/bg-main-desktop.png");
 }
 
 .pru,
@@ -20,7 +20,7 @@
 
 .fcard {
    margin-bottom: 3rem;
-   background-image: url('interactive-card-details-form-main/images/bg-card-front.png');
+   background-image: url("interactive-card-details-form-main/images/bg-card-front.png");
 }
 
 input {
@@ -33,5 +33,32 @@ input::-webkit-inner-spin-button {
 }
 
 .bcard {
-   background-image: url('interactive-card-details-form-main/images/bg-card-back.png');
+   background-image: url("interactive-card-details-form-main/images/bg-card-back.png");
+}
+
+@media screen and (max-width: 640px) {
+   .pru {
+      width: 100%;
+
+   }
+
+   .infos {
+      width: 90%;
+   }
+
+   .fcard {
+      background-size: 330px 200px;
+      z-index: 10;
+   }
+
+   .bcard {
+      background-size: 330px 200px;
+   }
+
+   .fcard,
+   .bcard {
+      width: 330px;
+      height: 200px;
+   }
+
 }
