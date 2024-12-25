@@ -15,10 +15,16 @@
 <body>
     <div class="hero sm:flex gap-10 justify-between font-space ">
         <div class="pru h-screen relative">
-            <div class="fcard h-60 absolute top-28 left-1  sm:left-48 rounded-2xl ">
-
+            <div class="fcard h-60 absolute top-28 left-1  sm:left-48 rounded-2xl uppercase">
+                <div class="bg-white w-14 h-14  m-4 rounded-full"></div>
+                <div class="absolute top-32 ml-4 mt-5  text-white  text-3xl">
+                    <p id="cardnumber">
+                        0000
+                        0000 0000 0000
+                    </p>
+                </div>
                 <div class="absolute bottom-0 m-4  flex justify-between w-96 text-white uppercase">
-                    <div><span id="nameo">your name </span></div>
+                    <div><span id="username">your name </span></div>
                     <div class="flex justify-between ">
                         <span id="month">00</span>
                         <span>/</span>
@@ -32,12 +38,14 @@
         </div>
         <div class="infos flex flex-col justify-center mr-36 ml-36">
             <label class="mb-3 uppercase tracking-widest font-medium">cardholder name</label>
-            <input id="name" type="text" class="border-solid border-lightviolet border-2  text-xl p-2  rounded-lg"
+            <input id="nameofuser" type="text" class="border-solid border-lightviolet border-2  text-xl p-2  rounded-lg"
                 placeholder="e.g. Jane Appleseed ">
             <label class="mb-3 uppercase tracking-widest font-medium">card number</label>
-            <input type="number"
+            <input type="text" id="usernumber"
                 class="border-solid border-lightviolet border-2 p-2 rounded-lg text-xl appearance-none -webkit-appearance-none"
                 placeholder=" e.g. 1234 5678 9123 0000 ">
+            <span class="text-red-500 mb-2 hidden " id="errorc">card number must contain 16 digits only with spaces
+            </span>
             <div class=" flex justify-between " id="date">
                 <div class="flex-col flex justify-start">
                     <label class="mb-3 mt-3 uppercase tracking-widest font-medium">exp. date (mm/yy)</label>
@@ -51,7 +59,7 @@
                 </div>
                 <div class="cvc flex-col flex justify-start"><label
                         class="mb-3 mt-3 uppercase tracking-widest font-medium">cvc</label>
-                    <input id="cardn" type="number"
+                    <input id="usercvc" type="number"
                         class="border-solid border-lightviolet border-2 p-2  w-56 rounded-lg text-xl appearance-none -webkit-appearance-none"
                         placeholder=" e.g.123 ">
                 </div>
