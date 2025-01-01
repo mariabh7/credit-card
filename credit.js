@@ -24,6 +24,7 @@ for (let i in userinfo) {
         }
     });
 }
+// comments 
 const errorc = document.getElementById("errorc");
 const initialContent = errorc.innerText;
 userinfo.cardNumber.addEventListener('input', function () {
